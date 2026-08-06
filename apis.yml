@@ -1,7 +1,17 @@
 aid: acepodia
 name: Acepodia
-description: 'Acepodia is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Acepodia is a clinical-stage biotechnology company founded in 2017 by
+  Dr. Patrick Y. Yang and Dr. Sonny Hsiao, headquartered in Alameda, California with
+  operations in Taipei, Taiwan. It develops off-the-shelf allogeneic cell therapies
+  for cancer and autoimmune disease built on two proprietary platforms: Antibody-Cell
+  Conjugation (ACC), which uses bioorthogonal click chemistry from Carolyn Bertozzi''s
+  Nobel Prize-winning work to attach tumor-targeting antibodies to gamma delta 2 T
+  cells and natural killer cells without genetic engineering, and Antibody-Dual-Drugs
+  Conjugation (AD2C). Its clinical pipeline includes ACE1831, an anti-CD20 gamma delta
+  T cell therapy, and ACE2016, an anti-EGFR gamma delta T cell therapy. Acepodia is
+  a therapeutics developer rather than a software vendor, and publishes no public API,
+  developer portal, or machine-readable specification.'
+image: https://www.acepodia.com/upload/base_fb_img/enL_01ns_web_base_20K06_uiwbgs3abs.png
 url: https://raw.githubusercontent.com/api-evangelist/acepodia/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,13 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Biotechnology
+- Cell Therapy
+- Oncology
+- Immunotherapy
+- Life Sciences
+- Clinical Stage
+- Healthcare
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,64 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.acepodia.com/
+- type: About
+  url: https://www.acepodia.com/about/
+- type: Contact
+  url: https://www.acepodia.com/contact/
+- type: Careers
+  url: https://www.acepodia.com/careers/
+- type: Leadership
+  url: https://www.acepodia.com/leadership/
+- type: Technology
+  url: https://www.acepodia.com/technology/
+- type: Pipeline
+  url: https://www.acepodia.com/pipeline/
+- type: Partnerships
+  url: https://www.acepodia.com/partnerships/
+- type: News
+  url: https://www.acepodia.com/newsroom/
+- type: PressReleases
+  url: https://www.acepodia.com/newsroom/press-releases/
+- type: PrivacyPolicy
+  url: https://www.acepodia.com/legal/privacy/
+- type: TermsOfService
+  url: https://www.acepodia.com/legal/terms-of-use/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/acepodia/
+- type: DomainSecurity
+  url: security/acepodia-domain-security.yml
+- type: WellKnown
+  url: well-known/acepodia-well-known.yml
+- type: LLMsTxt
+  url: llms/acepodia-llms.txt
+- type: SecondaryMarket
   url: https://forgeglobal.com/acepodia_stock/
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Acepodia is a clinical-stage cell-therapy developer whose published sitemap.xml lists 38 URLs,
+    every one of them corporate (about, leadership, technology, pipeline, newsroom, partnerships,
+    careers, legal) — no api., developer., docs., portal., app., status. or trust. host resolves for
+    acepodia.com, no acepodia GitHub organisation exists, and every /.well-known/ and conventional
+    spec path on www.acepodia.com returns the site's own HTML 404 page.
+  evidence:
+  - url: https://www.acepodia.com/sitemap.xml
+    status: 200
+  - url: https://www.acepodia.com/openapi.json
+    status: 404
+  - url: https://www.acepodia.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.acepodia.com/.well-known/security.txt
+    status: 404
+  - url: https://www.acepodia.com/llms.txt
+    status: 404
+  - url: https://api.github.com/orgs/acepodia
+    status: 404
+  checked: '2026-08-06'

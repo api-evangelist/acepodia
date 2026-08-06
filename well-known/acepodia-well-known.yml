@@ -1,0 +1,103 @@
+generated: '2026-08-06'
+method: probed
+source: live probes of https://www.acepodia.com/.well-known/* and the API-discovery paths on 2026-08-06
+host: https://www.acepodia.com
+result: none
+note: >-
+  No /.well-known/ discovery document is published on acepodia.com. Every path below is answered by
+  the corporate site's own HTML 404 page (Content-Type text/html, lang="zh-Hant-TW"), not by a
+  discovery document. There is no security.txt, no OIDC or OAuth metadata, no api-catalog, no
+  ai-plugin.json and no A2A agent card at either the canonical /.well-known/agent-card.json path or
+  the legacy /.well-known/agent.json path. Because the origin returns a real 404 status (rather than
+  a 200 HTML catch-all), there is no soft-404 ambiguity here.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+  present: false
+- path: /.well-known/openid-configuration
+  status: 404
+  present: false
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  present: false
+- path: /.well-known/api-catalog
+  status: 404
+  present: false
+- path: /.well-known/ai-plugin.json
+  status: 404
+  present: false
+- path: /.well-known/agent-card.json
+  status: 404
+  present: false
+- path: /.well-known/agent.json
+  status: 404
+  present: false
+- path: /llms.txt
+  status: 404
+  present: false
+spec_discovery:
+  note: >-
+    Contract discovery (pipeline STEP 0b) run against acepodia.com and every plausible API host. No
+    OpenAPI, Swagger, GraphQL SDL, AsyncAPI or MCP endpoint exists. The published sitemap.xml lists
+    38 URLs, all of them corporate: home, about, leadership, technology, pipeline, newsroom,
+    partnerships, contact, careers and legal pages. Nothing developer-facing appears anywhere on the
+    property.
+  probes:
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /v1/openapi.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /api
+    status: 404
+  - path: /docs
+    status: 404
+  - path: /redoc
+    status: 404
+  - path: /rapidoc
+    status: 404
+  - path: /graphql
+    status: 404
+  - path: /wp-json/
+    status: 404
+  hosts:
+  - host: api.acepodia.com
+    dns: NXDOMAIN
+  - host: developer.acepodia.com
+    dns: NXDOMAIN
+  - host: docs.acepodia.com
+    dns: NXDOMAIN
+  - host: portal.acepodia.com
+    dns: NXDOMAIN
+  - host: app.acepodia.com
+    dns: NXDOMAIN
+  - host: status.acepodia.com
+    dns: NXDOMAIN
+  - host: trust.acepodia.com
+    dns: NXDOMAIN
+  github_org:
+    url: https://api.github.com/orgs/acepodia
+    status: 404
+    note: >-
+      No GitHub organisation named acepodia exists; a GitHub user search for "acepodia" returns
+      total_count 0.
+robots:
+  url: https://www.acepodia.com/robots.txt
+  status: 200
+  sitemap: https://www.acepodia.com/sitemap.xml
+  disallow:
+  - /manage
+  - /bbpe
+  - /public/lineBot
+  - /*/act/
+  - /*/act.php
+  note: >-
+    robots.txt disallows only the CMS administration routes (/manage), an internal /bbpe path and a
+    LINE messaging-bot callback under /public/lineBot. None of the paths this pipeline probed are
+    disallowed. The /public/lineBot route is a webhook callback for the company's own LINE official
+    account, not a developer offering, and is not harvested or modelled as an API here.
