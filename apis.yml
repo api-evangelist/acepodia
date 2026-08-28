@@ -11,6 +11,17 @@ description: 'Acepodia is a clinical-stage biotechnology company founded in 2017
   T cell therapy, and ACE2016, an anti-EGFR gamma delta T cell therapy. Acepodia is
   a therapeutics developer rather than a software vendor, and publishes no public API,
   developer portal, or machine-readable specification.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.acepodia.com/upload/base_fb_img/enL_01ns_web_base_20K06_uiwbgs3abs.png
 url: https://raw.githubusercontent.com/api-evangelist/acepodia/refs/heads/main/apis.yml
 x-type: company
