@@ -22,6 +22,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://www.acepodia.com/upload/base_fb_img/enL_01ns_web_base_20K06_uiwbgs3abs.png
 url: https://raw.githubusercontent.com/api-evangelist/acepodia/refs/heads/main/apis.yml
 x-type: company
